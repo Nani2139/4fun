@@ -1,0 +1,137 @@
+/* src/components/AvailableRooms.css */
+
+.available-rooms {
+    margin: 20px 0;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .room-card {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .room-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .room-image {
+    position: relative;
+    height: 180px; /* Adjusted for a better aspect ratio */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .badge.available {
+    background-color: #006aff;
+  }
+  
+  .badge.recommended {
+    top: 40px;
+    background-color: gold;
+  }
+  
+  .badge.top-rated {
+    top: 70px;
+    background-color: #006aff;
+  }
+  
+  .badge.not-available {
+    background-color: grey;
+  }
+  
+  .room-details {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .room-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: grey;
+    margin-left: 5px;
+  }
+  
+  .security-deposit {
+    font-size: 0.9rem;
+    color: #707070;
+  }
+  
+  .room-type {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .room-services {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .service-tag {
+    background-color: #f1f3f5;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Not Available Room - Greyscale Effect */
+  .room-card.not-available .room-image img {
+    filter: grayscale(100%);
+  }
+  
+  .room-card.not-available .room-details {
+    opacity: 0.5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .room-card {
+      width: 45%; /* Display 2 cards per row for mid-sized screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .room-card {
+      width: 100%; /* Display 1 card per row for mobile screens */
+    }
+  }
+  
