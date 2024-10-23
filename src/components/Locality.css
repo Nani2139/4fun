@@ -1,104 +1,120 @@
 .locality-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-inline: 100px;
+  position: relative;
+}
+
+.locality-headings{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.locality-headings>h3{
+  margin: 0%;
+}
+.locality-bottom{
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.locality-left {
+  width: 50%; /* Adjusted the width to provide more space for the map */
+  position: relative;
+  margin-block: 40px;
+}
+
+.locality-left h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.view-map-btn {
+  background-color: #e6f0ff;
+  color: #006aff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  top: 10px; /* Positioning at the top */
+  left: 50%; /* Aligning to the right corner */
+  z-index: 10; /* Ensuring the button is above the map */
+}
+
+.map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f3f5;
+  height: 300px; /* Fixed height for map container */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.locality-right {
+  width: 50%; /* Adjusted width to fit with the layout */
+  background-color: #f8faff; /* Light background for contrast */
+  border-radius: 10px;
+  padding: 20px;
+  margin-block: 40px;
+}
+
+.landmarks h4 {
+  margin-bottom: 15px;
+  color: #707070;
+  font-weight: bold;
+  font-size: 1.2rem; /* Slightly bigger text */
+}
+
+.landmarks ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
+}
+
+.landmarks ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.landmarks ul li svg {
+  color: #006aff;
+}
+
+@media (max-width: 1024px) {
+  .locality-container {
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .locality-left {
-    width: 60%; /* Adjusted the width to provide more space for the map */
-    position: relative; /* Added to help position "View on Maps" button */
-  }
-  
-  .locality-left h3 {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .view-map-btn {
-    background-color: #e6f0ff;
-    color: #006aff;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;  /* Positioning at the top */
-    right: 10px; /* Aligning to the right corner */
-    z-index: 10; /* Ensuring the button is above the map */
-  }
-  
-  .map-loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f3f5;
-    height: 300px; /* Fixed height for map container */
-    border-radius: 10px;
-    font-size: 1rem;
-    color: #555;
-  }
-  
+
+  .locality-left,
   .locality-right {
-    width: 35%; /* Adjusted width to fit with the layout */
-    background-color: #f8faff; /* Light background for contrast */
-    border-radius: 10px;
-    padding: 20px;
+    width: 100%;
   }
-  
-  .landmarks h4 {
-    margin-bottom: 15px;
-    color: #707070;
-    font-weight: bold;
-    font-size: 1.2rem; /* Slightly bigger text */
+}
+
+@media (max-width: 768px) {
+  .view-map-btn {
+    width: 100%;
+    text-align: center;
   }
-  
-  .landmarks ul {
-    list-style: none;
-    padding-left: 0;
-    line-height: 1.8;
-    font-size: 1rem;
-    color: #333;
-  }
-  
+
   .landmarks ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 0.9rem;
   }
-  
-  .landmarks ul li svg {
-    color: #006aff;
+
+  .locality-left {
+    height: 250px;
   }
-  
-  @media (max-width: 1024px) {
-    .locality-container {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .locality-left,
-    .locality-right {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .view-map-btn {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .landmarks ul li {
-      font-size: 0.9rem;
-    }
-  
-    .locality-left {
-      height: 250px;
-    }
-  }
-  
+}

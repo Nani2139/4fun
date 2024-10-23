@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import './AvailableRooms.css';
 
 // Import images
-import room1 from '../assets/room1.jpg'; // Replace with actual images
+import room1 from '../assets/HouseImage.png'; // Replace with actual images
 
 const roomsData = [
   {
@@ -55,7 +55,7 @@ const AvailableRooms = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // 3 seconds
+    autoplaySpeed: 1000, // 3 seconds
     pauseOnHover: true, // Pause autoplay on hover
     responsive: [
       {
@@ -83,22 +83,24 @@ const AvailableRooms = () => {
           <div key={room.id} className={`room-card ${room.availability === 'Not Available' ? 'not-available' : ''}`}>
             <div className="room-image">
               <img src={room.image} alt={room.title} />
-              {room.recommended && <span className="badge recommended">RECOMMENDED</span>}
+              {/* {room.recommended && <span className="badge recommended">RECOMMENDED</span>}
               {room.availability === 'Available' ? (
                 <span className="badge available">Available</span>
               ) : (
                 <span className="badge not-available">Not Available</span>
               )}
-              {room.topRated && <span className="badge top-rated">Top Rated</span>}
+              {room.topRated && <span className="badge top-rated">Top Rated</span>} */}
             </div>
             <div className="room-details">
               <h4>{room.title}</h4>
-              <p className="room-price">
-                <span className="current-price">{room.price}</span>{' '}
-                <span className="old-price">{room.oldPrice}</span>
-              </p>
-              <p className="security-deposit">{room.securityDeposit}</p>
-              <p className="room-type">{room.type}</p>
+              <div className='room-price-container'>
+                <p className="room-price">
+                  <span className="current-price">{room.price}</span>{' '}
+                  <span className="old-price">{room.oldPrice}</span>
+                </p>
+                <p className="security-deposit">{room.securityDeposit}</p>
+              </div>
+              {/* <p className="room-type">{room.type}</p> */}
               <div className="room-services">
                 {room.services.map((service, index) => (
                   <span key={index} className="service-tag">{service}</span>

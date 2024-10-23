@@ -53,16 +53,29 @@ function PropertyCard({ images }) {
       {/* Right Section with Details */}
       <div className="property-details-section">
         <div className="property-header">
-          <h3 className="property-title">Canberra House</h3>
-          <p className="property-location">Narsingi</p>
+          <div className='property-left'>
+            <h3 className="property-title">Canberra House</h3>
+            <p className="property-location">Narsingi</p>
+          </div>
           <div className="property-actions">
-            <FaShareAlt className="action-icon" />
-            <FaHeart className="action-icon" />
+            <div className='property-actions-background'>
+              <FaShareAlt className="action-icon" />
+            </div> 
+            <div className='property-actions-background2'>
+              <FaHeart className="action-icon" color='white' />
+            </div>
           </div>
         </div>
-        <div className="property-pricing">
-          <p className="current-price">₹42,109/month</p>
-          <p className="original-price">₹45,234/month</p>
+        <div className='property-pricing-container'>
+          <div className="property-pricing">
+            <p>Starts at</p>
+            <p className="current-price"><span>₹42,109/month</span></p>
+            <p className="original-price">₹45,234/month</p>
+          </div>
+          <div className="property-actions-buttons">
+            <button className="callback-button">Request Callback</button>
+            <button className="visit-button">Visit Property</button>
+          </div>
         </div>
         <div className="property-services">
           <h5>Services</h5>
@@ -74,12 +87,6 @@ function PropertyCard({ images }) {
             <span className="service-tag">Storage Shelf</span>
             <span className="service-tag">+ 3 more</span>
           </div>
-        </div>
-
-        {/* Call to Action Buttons */}
-        <div className="property-actions-buttons">
-          <button className="callback-button">Request Callback</button>
-          <button className="visit-button">Visit Property</button>
         </div>
       </div>
     </div>

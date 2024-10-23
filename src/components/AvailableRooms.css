@@ -1,99 +1,128 @@
+.available-rooms{
+  margin-inline: 100px;
+  margin-block: 20px;
+  height: 450px;
+}
+.slick-slide{
+  margin-inline: 10px;
+  gap: 10px;
+}
+.slick-dots {
+  display: none !important;
+}
 .room-card {
-    width: 250px; /* Adjust width as per your needs */
-    padding: 8px;
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 8px;
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  width: 326px; /* Adjust width as per your needs */
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-  
-  .room-card:hover {
-    transform: scale(1.02);
+.room-card:hover {
+  transform: scale(1.02);
+}
+
+.room-image {
+  position: relative;
+  height: 144px; /* Further reduce image height */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-details {
+  padding: 8px 0; /* Reduce padding inside the details section */
+  text-align: left;
+  width: 100%; /* Ensure full width is used */
+}
+
+.room-details>h4{
+  font-size: 14px;
+  font-weight: 400;
+  margin-block: 7px;
+  margin-inline: 5px;
+}
+
+.current-price{
+  color: white;
+  height: 24px;
+}
+
+.room-price-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 5px;
+}
+
+.room-price {
+  font-size: 1.1rem; /* Slightly reduce font size */
+  font-weight: bold;
+}
+
+.old-price {
+  font-size: 0.9rem; /* Reduce font size */
+  text-decoration: line-through;
+  color: grey;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.security-deposit {
+  font-size: 0.8rem; /* Reduce font size */
+  color: #707070;
+}
+
+.room-type {
+  font-size: 0.8rem; /* Reduce font size */
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.room-services {
+  margin-top: 8px; /* Reduce space between services */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-inline: 5px; /* Reduce gap between service tags */
+}
+
+.service-tag {
+  background-color: #f1f3f5;
+  border-radius: 12px;
+  padding: 4px 8px; /* Reduce padding inside service tags */
+  font-size: 0.8rem; /* Reduce font size */
+  color: #333;
+}
+
+/* Not Available Room - Greyscale Effect */
+.room-card.not-available .room-image img {
+  filter: grayscale(100%);
+}
+
+.room-card.not-available .room-details {
+  opacity: 0.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .room-card {
+    width: 40%; /* Reduce the width for mid-sized screens */
   }
-  
-  .room-image {
-    position: relative;
-    height: 140px; /* Further reduce image height */
-    width: 100%; /* Ensure image takes up the full width of the card */
-    border-radius: 10px;
-    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .room-card {
+    width: 100%; /* Display 1 card per row for mobile screens */
   }
-  
-  .room-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .room-details {
-    padding: 8px 0; /* Reduce padding inside the details section */
-    text-align: left;
-    width: 100%; /* Ensure full width is used */
-  }
-  
-  .room-price {
-    font-size: 1.1rem; /* Slightly reduce font size */
-    font-weight: bold;
-  }
-  
-  .old-price {
-    font-size: 0.9rem; /* Reduce font size */
-    text-decoration: line-through;
-    color: grey;
-    margin-left: 5px;
-  }
-  
-  .security-deposit {
-    font-size: 0.8rem; /* Reduce font size */
-    color: #707070;
-  }
-  
-  .room-type {
-    font-size: 0.8rem; /* Reduce font size */
-    font-weight: bold;
-    margin-top: 8px;
-  }
-  
-  .room-services {
-    margin-top: 8px; /* Reduce space between services */
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px; /* Reduce gap between service tags */
-  }
-  
-  .service-tag {
-    background-color: #f1f3f5;
-    border-radius: 12px;
-    padding: 4px 8px; /* Reduce padding inside service tags */
-    font-size: 0.8rem; /* Reduce font size */
-    color: #333;
-  }
-  
-  /* Not Available Room - Greyscale Effect */
-  .room-card.not-available .room-image img {
-    filter: grayscale(100%);
-  }
-  
-  .room-card.not-available .room-details {
-    opacity: 0.5;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 1024px) {
-    .room-card {
-      width: 40%; /* Reduce the width for mid-sized screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .room-card {
-      width: 100%; /* Display 1 card per row for mobile screens */
-    }
-  }
-  
+}
