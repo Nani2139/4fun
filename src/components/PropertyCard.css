@@ -1,0 +1,157 @@
+/* src/components/PropertyCard.css */
+
+.property-card {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  
+  .property-image-section {
+    position: relative;
+    width: 100%; /* Ensure the image takes up full width */
+    height: 300px; /* Set a fixed height for consistent image size */
+  }
+  
+  .property-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Carousel Buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-button.left {
+    left: 10px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+  }
+  
+  .property-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .badge {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .badge-match {
+    background-color: black;
+  }
+  
+  .badge-top-rated {
+    background-color: #006aff;
+  }
+  
+  .property-type {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .property-details-section {
+    padding: 20px;
+    width: 50%;
+    position: relative;
+  }
+  
+  .property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .property-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .property-location {
+    font-size: 0.9rem;
+    color: grey;
+  }
+  
+  .property-actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .action-icon {
+    font-size: 1.2rem;
+    color: #006aff;
+    cursor: pointer;
+  }
+  
+  .property-pricing {
+    margin: 10px 0;
+  }
+  
+  .current-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .original-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: grey;
+  }
+  
+  .property-services {
+    margin-top: 20px;
+  }
+  
+  .service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .service-tag {
+    background-color: #f1f3f5;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  

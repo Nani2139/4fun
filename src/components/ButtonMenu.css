@@ -1,0 +1,49 @@
+/* src/components/ButtonMenu.css */
+.button-menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 10px;
+  }
+  
+  .menu-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .menu-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .show-map-button, .filter-button {
+    background-color: #006aff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .filter-button {
+    background-color: #f1f3f5;
+    color: #333;
+  }
+  

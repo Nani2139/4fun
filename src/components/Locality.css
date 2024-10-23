@@ -1,0 +1,120 @@
+/* src/components/Locality.css */
+
+.locality-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.locality-left {
+  width: 60%;
+}
+
+.locality-left h3 {
+  margin-bottom: 10px;
+}
+
+.view-map-btn {
+  background-color: #e6f0ff;
+  color: #006aff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.locality-right {
+  width: 35%;
+  padding-left: 20px;
+}
+
+.landmarks h4,
+.peer-group h4 {
+  margin-bottom: 10px;
+  color: #707070;
+  font-weight: bold;
+}
+
+.landmarks ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
+}
+
+.landmarks ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.landmarks ul li svg {
+  color: #006aff;
+}
+
+.peer-group .percentage {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #006aff;
+}
+
+.slider {
+  margin-top: 10px;
+  background-color: #f0f4ff;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.slider-track {
+  width: 100%;
+  height: 10px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-fill {
+  height: 100%;
+  background-color: #006aff;
+  border-radius: 5px;
+  position: relative;
+}
+
+.slider-marker {
+  background-color: #e6f0ff;
+  color: #006aff;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 12px;
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider p {
+  margin-top: 10px;
+  color: #707070;
+}
+
+.slider a {
+  color: #006aff;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.slider a:hover {
+  text-decoration: underline;
+}
