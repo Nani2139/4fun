@@ -1,5 +1,3 @@
-// src/components/PropertyCard.js
-
 import React, { useState } from 'react';
 import './PropertyCard.css';
 import { FaStar, FaHeart, FaShareAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -76,6 +74,12 @@ function PropertyCard({ images }) {
             <span className="service-tag">Storage Shelf</span>
             <span className="service-tag">+ 3 more</span>
           </div>
+        </div>
+
+        {/* Call to Action Buttons */}
+        <div className="property-actions-buttons">
+          <button className="callback-button">Request Callback</button>
+          <button className="visit-button">Visit Property</button>
         </div>
       </div>
     </div>

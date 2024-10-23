@@ -1,49 +1,109 @@
 /* src/components/ButtonMenu.css */
+
 .button-menu-container {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.menu-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  border-bottom: 2px solid black;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.show-map-button, .filter-button {
+  background-color: #006aff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.filter-button {
+  background-color: #f1f3f5;
+  color: #333;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+  .button-menu-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-buttons {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .menu-button {
+    font-size: 0.9rem;
+  }
+
+  .action-buttons {
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    border-bottom: 1px solid #e5e5e5;
     margin-top: 10px;
   }
-  
-  .menu-buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .menu-button {
-    background-color: transparent;
-    border: none;
-    font-size: 1rem;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .menu-button:hover {
-    font-weight: bold;
-    border-bottom: 2px solid black;
-  }
-  
-  .action-buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
+
   .show-map-button, .filter-button {
-    background-color: #006aff;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 0.9rem;
   }
-  
-  .filter-button {
-    background-color: #f1f3f5;
-    color: #333;
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  .button-menu-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .menu-buttons {
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .menu-button {
+    font-size: 0.85rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .show-map-button, .filter-button {
+    width: 100%;
+    text-align: center;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+  }
+}

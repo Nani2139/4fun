@@ -1,72 +1,160 @@
 /* src/components/Navbar.css */
+
 .navbar-custom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #000;
+}
+
+.navbar-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px; /* Adds spacing between location button and other elements */
+}
+
+.location-button {
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}
+
+.search-icon {
+  margin-left: 10px;
+  color: #5a9eff;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adds space between buttons */
+}
+
+.property-button {
+  background-color: #006aff;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-right: 15px;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and Smaller Screens */
+@media (max-width: 1024px) {
   .navbar-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   .navbar-logo {
-    display: flex;
-    align-items: center;
+    margin-bottom: 10px;
   }
-  
+
   .brand-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-left: 10px;
-    color: #000;
+    font-size: 1rem;
   }
-  
+
   .navbar-location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 10px;
+    width: 100%; /* Makes sure the location button takes full width */
   }
-  
+
   .location-button {
-    background-color: #f1f3f5;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    color: #555;
+    width: 100%; /* Full width */
+    padding: 8px 15px;
+    font-size: 0.9rem;
   }
-  
-  .search-icon {
-    margin-left: 10px;
-    color: #5a9eff;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .property-button {
-    background-color: #006aff;
-    color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    margin-right: 15px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    margin-right: 0;
+    width: 100%; /* Full width */
+    text-align: center;
   }
-  
+
   .profile-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 35px;
+    height: 35px;
   }
-  
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  .navbar-custom {
+    padding: 10px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar-location {
+    width: 100%; /* Full width for location button */
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .location-button {
+    width: 100%; /* Full width for location button */
+    justify-content: center;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+  }
+
+  .property-button {
+    width: 100%; /* Full width for property button */
+    text-align: center;
+    padding: 8px 20px;
+    margin-bottom: 10px;
+  }
+
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+}

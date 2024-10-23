@@ -1,120 +1,104 @@
-/* src/components/Locality.css */
-
 .locality-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-}
-
-.locality-left {
-  width: 60%;
-}
-
-.locality-left h3 {
-  margin-bottom: 10px;
-}
-
-.view-map-btn {
-  background-color: #e6f0ff;
-  color: #006aff;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.locality-right {
-  width: 35%;
-  padding-left: 20px;
-}
-
-.landmarks h4,
-.peer-group h4 {
-  margin-bottom: 10px;
-  color: #707070;
-  font-weight: bold;
-}
-
-.landmarks ul {
-  list-style: none;
-  padding-left: 0;
-  line-height: 1.8;
-  font-size: 1rem;
-  color: #333;
-}
-
-.landmarks ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.landmarks ul li svg {
-  color: #006aff;
-}
-
-.peer-group .percentage {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #006aff;
-}
-
-.slider {
-  margin-top: 10px;
-  background-color: #f0f4ff;
-  padding: 15px;
-  border-radius: 15px;
-  position: relative;
-}
-
-.slider-track {
-  width: 100%;
-  height: 10px;
-  background-color: #e6e6e6;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider-fill {
-  height: 100%;
-  background-color: #006aff;
-  border-radius: 5px;
-  position: relative;
-}
-
-.slider-marker {
-  background-color: #e6f0ff;
-  color: #006aff;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 12px;
-  position: absolute;
-  top: -20px;
-  right: -30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.slider p {
-  margin-top: 10px;
-  color: #707070;
-}
-
-.slider a {
-  color: #006aff;
-  font-size: 0.9rem;
-  display: block;
-  margin-top: 5px;
-  text-decoration: none;
-}
-
-.slider a:hover {
-  text-decoration: underline;
-}
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  
+  .locality-left {
+    width: 60%; /* Adjusted the width to provide more space for the map */
+    position: relative; /* Added to help position "View on Maps" button */
+  }
+  
+  .locality-left h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .view-map-btn {
+    background-color: #e6f0ff;
+    color: #006aff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;  /* Positioning at the top */
+    right: 10px; /* Aligning to the right corner */
+    z-index: 10; /* Ensuring the button is above the map */
+  }
+  
+  .map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f3f5;
+    height: 300px; /* Fixed height for map container */
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .locality-right {
+    width: 35%; /* Adjusted width to fit with the layout */
+    background-color: #f8faff; /* Light background for contrast */
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .landmarks h4 {
+    margin-bottom: 15px;
+    color: #707070;
+    font-weight: bold;
+    font-size: 1.2rem; /* Slightly bigger text */
+  }
+  
+  .landmarks ul {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .landmarks ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .landmarks ul li svg {
+    color: #006aff;
+  }
+  
+  @media (max-width: 1024px) {
+    .locality-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .locality-left,
+    .locality-right {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .view-map-btn {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .landmarks ul li {
+      font-size: 0.9rem;
+    }
+  
+    .locality-left {
+      height: 250px;
+    }
+  }
+  

@@ -1,26 +1,17 @@
-/* src/components/AvailableRooms.css */
-
-.available-rooms {
-    margin: 20px 0;
-  }
-  
-  h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: left;
-    padding-left: 10px;
-  }
-  
-  .room-card {
-    padding: 10px;
+.room-card {
+    width: 250px; /* Adjust width as per your needs */
+    padding: 8px;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 8px;
     transition: transform 0.3s;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
   
   .room-card:hover {
     transform: scale(1.02);
@@ -28,7 +19,8 @@
   
   .room-image {
     position: relative;
-    height: 180px; /* Adjusted for a better aspect ratio */
+    height: 140px; /* Further reduce image height */
+    width: 100%; /* Ensure image takes up the full width of the card */
     border-radius: 10px;
     overflow: hidden;
   }
@@ -39,77 +31,47 @@
     object-fit: cover;
   }
   
-  .badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .badge.available {
-    background-color: #006aff;
-  }
-  
-  .badge.recommended {
-    top: 40px;
-    background-color: gold;
-  }
-  
-  .badge.top-rated {
-    top: 70px;
-    background-color: #006aff;
-  }
-  
-  .badge.not-available {
-    background-color: grey;
-  }
-  
   .room-details {
-    padding: 10px;
+    padding: 8px 0; /* Reduce padding inside the details section */
     text-align: left;
+    width: 100%; /* Ensure full width is used */
   }
   
   .room-price {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Slightly reduce font size */
     font-weight: bold;
   }
   
   .old-price {
+    font-size: 0.9rem; /* Reduce font size */
     text-decoration: line-through;
     color: grey;
     margin-left: 5px;
   }
   
   .security-deposit {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Reduce font size */
     color: #707070;
   }
   
   .room-type {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Reduce font size */
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 8px;
   }
   
   .room-services {
-    margin-top: 10px;
+    margin-top: 8px; /* Reduce space between services */
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px; /* Reduce gap between service tags */
   }
   
   .service-tag {
     background-color: #f1f3f5;
     border-radius: 12px;
-    padding: 5px 10px;
-    font-size: 0.9rem;
+    padding: 4px 8px; /* Reduce padding inside service tags */
+    font-size: 0.8rem; /* Reduce font size */
     color: #333;
   }
   
@@ -125,7 +87,7 @@
   /* Responsive Styles */
   @media (max-width: 1024px) {
     .room-card {
-      width: 45%; /* Display 2 cards per row for mid-sized screens */
+      width: 40%; /* Reduce the width for mid-sized screens */
     }
   }
   
