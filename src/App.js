@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import ButtonMenu from './components/ButtonMenu';
 import PropertyCard from './components/PropertyCard';
-import image1 from './assets/property-image.jpg';
+import image1 from './assets/HouseImage.png';
 import image2 from './assets/hotel2.jpg';
 import image3 from './assets/property-image.jpg';
 import Locality from './components/Locality';
